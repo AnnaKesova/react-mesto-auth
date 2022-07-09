@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../images/mestologo.svg";
 import { Route, Routes } from "react-router-dom";
 
-function Header({email, signOut}) {
+function Header({ email, signOut }) {
   return (
     <header className="page__header header">
       <img src={logo} alt="Логотип" className="header__logo" />
@@ -31,12 +31,16 @@ function Header({email, signOut}) {
           exact
           path="/"
           element={
-            <div className="header__login">
-              <p className="header__email">{email}</p>
-              <a href="/sign-in" className="header__exit" onClick={signOut}>
-                Выйти
-              </a>
-            </div>
+            <nav className="header__name">
+              <ul className="header__login">
+                <li className="header__email">{email}</li>
+                <li>
+                  <a href="/sign-in" className="header__exit" onClick={signOut}>
+                    Выйти
+                  </a>
+                </li>
+              </ul>
+            </nav>
           }
         ></Route>
       </Routes>

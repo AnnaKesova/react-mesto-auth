@@ -32,6 +32,7 @@ function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [isInfoTooltip, setIsInfoTooltip] = useState({ image: "", title: "" });
   const [isInfoTooltipOpen, setInfoTooltipOpen] = useState(false);
+  const [isEmail, setIsEmail] = useState("");
 
   // состояние для попапов
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
@@ -39,7 +40,6 @@ function App() {
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null);
   const [renderLoading, setRenderLoading] = useState(false);
-  const [isEmail, setIsEmail] = useState("");
 
   // хранилище, проверка токена
 
@@ -92,12 +92,6 @@ function App() {
         console.log(err);
       });
   }
-
-  /*useEffect(() => {
-    if (loggedIn) {
-      navigate("/");
-    }
-  }, [loggedIn]);*/
 
   function removeToken() {
     localStorage.removeItem("jwt");

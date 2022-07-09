@@ -10,8 +10,7 @@ function Register({ onRegister }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const { email, password } = data;
-    onRegister({ email, password });
+    onRegister(data);
   }
   return (
     <div className=" register login">
@@ -57,9 +56,14 @@ function Register({ onRegister }) {
         >
           Зарегистрироваться
         </button>
-        <Link to="/sign-in" className="form__confirm">
-          Уже зарегистрированы? Войти
-        </Link>
+        <p>
+          Уже зарегистрированы?{" "}
+          <span>
+            <Link to="/sign-in" className="form__confirm">
+              Войти
+            </Link>
+          </span>
+        </p>
       </form>
     </div>
   );

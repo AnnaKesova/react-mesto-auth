@@ -10,7 +10,6 @@ function Login({ onLogin }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    //const { email, password } = data;
     onLogin(data);
   }
 
