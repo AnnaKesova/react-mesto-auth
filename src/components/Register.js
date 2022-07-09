@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+
+import AuthForm from "./AuthForm";
 
 function Register({ onRegister }) {
   const [data, setData] = useState({ email: "", password: "" });
@@ -13,59 +14,46 @@ function Register({ onRegister }) {
     onRegister(data);
   }
   return (
-    <div className=" register login">
-      <form className="form login__form" onSubmit={handleSubmit}>
-        <h2 className="login__title">Регистрация</h2>
-        <input
-          className="form__item login__item form__item_type_email"
-          type="text"
-          name="email"
-          placeholder="Email"
-          value={data.email}
-          minLength="2"
-          maxLength="40"
-          required
-          id="email"
-          onChange={handleChange}
-        />
-        <span
-          className="form__item-error form__item-error_active"
-          id="username-error"
-        ></span>
-        <input
-          className="form__item login__item  form__item_type_password"
-          type="text"
-          name="password"
-          placeholder="Пароль"
-          value={data.password}
-          minLength="2"
-          maxLength="200"
-          required
-          id="password"
-          onChange={handleChange}
-        />
-        <span
-          className="form__item-error form__item-error_active"
-          id="job-error"
-        ></span>
-        <button
-          type="submit"
-          className="button popup__save form__exit"
-          title="Согласие"
-          aria-label="Согласиться"
-        >
-          Зарегистрироваться
-        </button>
-        <p>
-          Уже зарегистрированы?{" "}
-          <span>
-            <Link to="/sign-in" className="form__confirm">
-              Войти
-            </Link>
-          </span>
-        </p>
-      </form>
-    </div>
+    <AuthForm
+      title="Регистрация"
+      buttonText="Зарегистрироваться"
+      onSubmit={handleSubmit}
+      text="Уже зарегистрированы? "
+      link="Войти"
+    >
+      <input
+        className="form__item login__item form__item_type_email"
+        type="text"
+        name="email"
+        placeholder="Email"
+        value={data.email}
+        minLength="2"
+        maxLength="40"
+        required
+        id="email"
+        onChange={handleChange}
+      />
+      <span
+        className="form__item-error form__item-error_active"
+        id="username-error"
+      ></span>
+      <input
+        className="form__item login__item  form__item_type_password"
+        type="text"
+        name="password"
+        placeholder="Пароль"
+        value={data.password}
+        minLength="2"
+        maxLength="200"
+        required
+        id="password"
+        onChange={handleChange}
+      />
+      <span
+        className="form__item-error form__item-error_active"
+        id="job-error"
+      ></span>
+    </AuthForm>
   );
 }
 

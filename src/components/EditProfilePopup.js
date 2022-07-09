@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from "react";
+import React, { useState, useEffect, useContext } from "react";
 import PopupWithForm from "./PopupWithForm.js";
 import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
 
@@ -19,8 +19,8 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, loading }) {
   // После загрузки текущего пользователя из API
   // его данные будут использованы в управляемых компонентах.
   useEffect(() => {
-    setName("");
-    setDescription("");
+    setName(currentUser.name);
+    setDescription(currentUser.about);
   }, [currentUser, isOpen]);
 
   function handleSubmit(e) {
@@ -46,7 +46,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, loading }) {
         type="text"
         name="name"
         placeholder="Имя"
-        value={name}
+        value={name || ""}
         minLength="2"
         maxLength="40"
         required
@@ -62,7 +62,7 @@ function EditProfilePopup({ isOpen, onClose, onUpdateUser, loading }) {
         type="text"
         name="description"
         placeholder="О себе"
-        value={description}
+        value={description || ""}
         minLength="2"
         maxLength="200"
         required
