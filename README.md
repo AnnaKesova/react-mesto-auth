@@ -14,23 +14,16 @@
 хуки useState и useEffect  
 управляемые компоненты в элементах формы  
 
-### React Router
+### React Router  
+реализован функционал регистрации и авторизации  
+защищенные маршруты  
+авторизация через JWT  
+работа с Local Starage  
 
-    ### React
-        использование Create React App
-        хуки useState и useEffect
-        управляемые компоненты в элементах формы
+ Ссылка на проект: https://annakesova.github.io/react-mesto-auth/  
+ Макет проекта: https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/JavaScript.-Sprint-12?node-id=0%3A1  
 
-    ### React Router
-        реализован функционал регистрации и авторизации
-        защищенные маршруты
-        авторизация через JWT
-        работа с Local Starage
-
-    Ссылка на проект: https://annakesova.github.io/react-mesto-auth/
-    Макет проекта: https://www.figma.com/file/5H3gsn5lIGPwzBPby9jAOo/JavaScript.-Sprint-12?node-id=0%3A1
-
-    ## Инструкция по разрёртыванию проекта:
+ ## Инструкция по разрёртыванию проекта:
 
 ### клонировать репозиторий
 
