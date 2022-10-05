@@ -9,6 +9,13 @@
 Верстка форм
 Методология БЭМ
 
+### React
+использование Create React App
+хуки useState и useEffect
+управляемые компоненты в элементах формы
+
+### React Router
+
     ### React
         использование Create React App
         хуки useState и useEffect
